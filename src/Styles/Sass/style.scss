@@ -1,0 +1,184 @@
+@import "./MediaQueries.scss";
+
+
+
+
+$couleur_primaire: white;
+$couleur_secondaire: #ff0042;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "AceRecords";
+  src: url("../../Police/ace-records/AceRecords.ttf");
+}
+
+body {
+  background-color: #15181d !important;
+}
+$couleur_primaire: white;
+$couleur_secondaire: #ff0042;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#Start {
+  text-align: center;
+  font-weight: bold;
+  color: $couleur_secondaire;
+  border: solid 2px white;
+  width: 52%;
+  margin: 0 auto;
+  margin-top: 40px;
+  font-family: "Roboto", sans-serif;
+  &__Text {
+    font-size: 75px;
+  }
+}
+#Start--Button {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px;
+  width: 20%;
+  border-radius: 40px;
+  background-color: $couleur_secondaire;
+  margin: 0 auto;
+
+  & a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+#Main {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 3px solid $couleur_secondaire;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+}
+#Main--title {
+  width: 30%;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-evenly;
+  & a {
+    color: $couleur_primaire;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: transparent solid 2px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500 !important;
+
+    &:hover {
+      border-bottom: solid 2px $couleur_secondaire;
+    }
+  }
+}
+
+#Main--Logo {
+  font-family: AceRecords;
+  font-size: 55px;
+  color: $couleur_secondaire;
+  
+}
+#Main--Search {
+  display: flex;
+}
+#Main--Search input {
+  border: none;
+  border-bottom: solid 2px $couleur_secondaire;
+  outline: none;
+  font-size: 20px;
+  font-weight: Bold;
+  color: $couleur_secondaire;
+  background: none;
+}
+
+#OnTheTop__Column {
+  display: flex;
+  flex-direction: column;
+}
+#OnTheTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 1%;
+
+  &__Card {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1%;
+    &__Title {
+        color: $couleur_primaire;
+        font-size: 50px;
+        font-family: roboto;
+        border-bottom: solid 2px $couleur_secondaire;
+        width:20%;
+        margin: 0 auto;
+    }
+
+    &__Image {
+      width: 60%;
+      height: 600px;
+    }
+    &__Text {
+        width:40%;
+        height: 600px;
+        background-color: #1E2128;
+       
+       
+        & h2 {
+          color : white;
+          font-size: 40px;
+          width: 60%;
+          margin: 0 auto;
+          padding: 5px;
+          margin-bottom: 15px;
+          border-bottom: solid 2px $couleur_secondaire;
+        } 
+        & p {
+          width: 95%;
+          margin: 0 auto;
+          font-size: 25px;
+          height: 70%;
+          overflow: auto;
+         color: white;
+        }
+
+    }
+  }
+}
+
+#Button--Watch {
+  background-color: $couleur_secondaire;
+  font-size: 30px;
+  padding: 15px;
+  border-radius: 50px;
+  color: $couleur_primaire;
+  font-weight: bold;
+  outline: none;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.Onclick {
+  cursor: pointer;
+}
+
+@include MediaQueries;
+
+
+

@@ -1,0 +1,124 @@
+@mixin MediaQueries {
+  $couleur_primaire: white;
+  $couleur_secondaire: #ff0042;
+
+  @media screen and (max-width: 1300px) {
+    #Start {
+      border: solid 2px white;
+      width: 60%;
+      &__Text {
+        font-size: 75px;
+      }
+    }
+    #Start--Button {
+      width: 25%;
+      & a {
+      }
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    #Start {
+      width: 70%;
+      &__Text {
+        font-size: 70px;
+      }
+    }
+    #Start--Button {
+      width: 35%;
+
+      & a {
+      }
+    }
+    #Main--title {
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    #Start {
+      &__Text {
+      }
+    }
+    #Start--Button {
+      & a {
+      }
+    }
+    #Main--title {
+    }
+    #Main--Search {
+      // border: solid 2px white;
+      // width: 10%;
+      // border: none;
+      // border-bottom: solid 2px $couleur_secondaire;
+      // outline: none;
+      // font-size: 20px;
+      // font-weight: Bold;
+      // color: $couleur_secondaire;
+      // background: none;
+      display: none;
+    }
+    #Main {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    #Start {
+      width: 90%;
+      &__Text {
+        font-size: 60px;
+      }
+    }
+    #Start--Button {
+      width: 55%;
+      font-size: 35px;
+      & a {
+      }
+    }
+    #Main--title {
+      width: 100%;
+    }
+    #Main--Search {
+      // border: solid 2px white;
+      // width: 10%;
+      // border: none;
+      // border-bottom: solid 2px $couleur_secondaire;
+      // outline: none;
+      // font-size: 20px;
+      // font-weight: Bold;
+      // color: $couleur_secondaire;
+      // background: none;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    #Start {
+    
+      &__Text {
+        font-size: 40px;
+      }
+    }
+    #Start--Button {
+      width: 70%;
+      font-size: 30px;
+      & a {
+      }
+    }
+    #Main--title {
+     
+    }
+    #Main--Search {
+      // border: solid 2px white;
+      // width: 10%;
+      // border: none;
+      // border-bottom: solid 2px $couleur_secondaire;
+      // outline: none;
+      // font-size: 20px;
+      // font-weight: Bold;
+      // color: $couleur_secondaire;
+      // background: none;
+    }
+  }
+}
