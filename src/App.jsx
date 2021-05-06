@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 
 function App() {
-  const [Search, setSearch] = useState(null);
+  const [SearchValue, setSearchValue] = useState(null);
   const Website = "https://api.themoviedb.org/3/";
   const API = "4521ea8693f4def400a9777ba95e0bc2";
   const Url = "".concat(
@@ -14,27 +14,23 @@ function App() {
     "search/movie?api_key=",
     API,
     "&query=",
-    Search
+    SearchValue
   );
   const handleChange = (e) => {
-    setSearch(e.target.value.replace(" ", "+"));
+    setSearchValue(e.target.value.replace(" ", "+"));
   };
+  
   const [SearchMovies, SetSearchMovies] = useState([]);
-
-    // SearchClick
+  // SearchClick
   const handleClick = () => {
     fetch(Url)
-    .then((res) => res.json())
-    .then(function (data) {
-      let SearchResults = data.results;
-      console.log(SearchResults)
-      SetSearchMovies(SearchResults);
-      
-    });
+      .then((res) => res.json())
+      .then(function (data) {
+        let SearchResults = data.results;
+        console.log(SearchResults)
+        SetSearchMovies(SearchResults);
+      });
   };
-
-
-
   //
   const [TopMovies, SetTopMovies] = useState([]);
 
@@ -81,11 +77,10 @@ function App() {
         SetUpcoming(data.results);
       });
   }, []);
-  // All movies
 
   return (
     <BrowserRouter>
-      <Main SearchTyping={handleChange} SearchClick={handleClick} />
+      <Main eChange={handleChange} SearchClick={handleClick} ResultsSearch={SearchMovies} />
       <Route exact path="/" component={Start} />
       <Route Acceuil path="/Acceuil">
         <Acceuil data={TopMovies} popular={PopularMovies} upcoming={Upcoming} />

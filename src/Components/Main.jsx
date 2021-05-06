@@ -1,9 +1,12 @@
 import "../Styles/Sass/style.scss";
+import CardResults from "../Components/CardResults.jsx"
 
 import Icon_SearchBar from "../Images/search-solid.svg";
 function Main(props) {
+  console.log(props.ResultsSearch)
   return (
     <nav>
+      <CardResults ResultsSearch={props.ResultsSearch} />
       <div id="Main">
         <p id="Main--Logo">KA</p>
         <div id="Main--title">
@@ -21,7 +24,7 @@ function Main(props) {
               onChange={props.eChange}
             />
             <img
-              onClick={props.eClick}
+              onClick={props.SearchClick}
               src={Icon_SearchBar}
               alt=""
               className="Onclick"
