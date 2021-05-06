@@ -5,8 +5,9 @@ import Icon_SearchBar from "../Images/search-solid.svg";
 function Main(props) {
   console.log(props.ResultsSearch)
   return (
+    <>
     <nav>
-      <CardResults ResultsSearch={props.ResultsSearch} />
+      
       <div id="Main">
         <p id="Main--Logo">KA</p>
         <div id="Main--title">
@@ -24,7 +25,7 @@ function Main(props) {
               onChange={props.eChange}
             />
             <img
-              onClick={props.SearchClick}
+              onClick={props.eClick}
               src={Icon_SearchBar}
               alt=""
               className="Onclick"
@@ -33,6 +34,9 @@ function Main(props) {
         </div>
       </div>
     </nav>
+
+    <CardResults ResultsSearch={props.ResultsSearch} />
+    </>
   );
 }
 

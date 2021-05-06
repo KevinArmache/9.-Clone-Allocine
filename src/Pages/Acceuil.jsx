@@ -4,7 +4,9 @@ import Modele from "../Components/Modele.jsx";
 
 function Acceuil({ popular, data, upcoming }) {
   return (
-    <>
+
+  <>
+    <div className="MyHome">
       <h1 id="OnTheTop__Card__Title">A LA UNE</h1>
       <Slides
         titre={data.original_title}
@@ -61,6 +63,7 @@ function Acceuil({ popular, data, upcoming }) {
           );
         })}
       </div>
+    </div>
     </>
   );
 }
