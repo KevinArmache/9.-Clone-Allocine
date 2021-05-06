@@ -19,12 +19,16 @@ function App() {
   const handleChange = (e) => {
     setSearch(e.target.value.replace(" ", "+"));
   };
+  useEffect(function(){
+    let MyHome = document.querySelector(".MyHome")
+    
+    // Search ? MyHome.style.display = "none" : MyHome.style.display = "block"
+    
+  }, [Search])
 
   // Search
 
   const [SearchMovies, SetSearchMovies] = useState([]);
-
-  //
 
   const handleClick = () => {
     fetch(Url)
@@ -34,7 +38,16 @@ function App() {
         console.log(SearchResult);
         SetSearchMovies(SearchResult);
       });
+
+
   };
+
+ 
+
+
+// 
+
+// First Fetch
   const [TopMovies, SetTopMovies] = useState([]);
 
   useEffect(function () {
@@ -68,7 +81,7 @@ function App() {
         SetPopularMovies(PopularMovies);
       });
   }, []);
-
+// Nouveautes
   const [Upcoming, SetUpcoming] = useState([]);
 
   useEffect(function () {
@@ -80,7 +93,7 @@ function App() {
         SetUpcoming(data.results);
       });
   }, []);
-  // All movies
+ 
 
   return (
     <BrowserRouter>
