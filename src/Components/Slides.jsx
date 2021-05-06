@@ -1,9 +1,8 @@
 import "../Styles/Sass/style.scss";
 import FlecheGauche from "../Images/chevron-circle-left-solid.svg";
 import FlecheDroite from "../Images/chevron-circle-right-solid.svg";
-import DemonSlayer from "../Images/kny.png";
 
-const Slides = () => {
+const Slides = (props) => {
   return (
     <div id="OnTheTop">
       <div>
@@ -13,21 +12,11 @@ const Slides = () => {
       </div>
 
       <div id="OnTheTop__Column">
-        <h1 id="OnTheTop__Card__Title">A LA UNE</h1>
         <div id="OnTheTop__Card">
-          <img id="OnTheTop__Card__Image" src={DemonSlayer} alt="kny" />
+          <img id="OnTheTop__Card__Image" src={props.image} alt="A la une" />
           <div id="OnTheTop__Card__Text">
-            <h2>Kimetsu No Yaiba</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-        
-            </p>
+            <h2>{props.titre}</h2>
+            <p>{props.description}</p>
             <button id="Button--Watch">VISUALISER</button>
           </div>
         </div>

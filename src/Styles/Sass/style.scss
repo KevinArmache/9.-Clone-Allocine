@@ -1,8 +1,5 @@
 @import "./MediaQueries.scss";
 
-
-
-
 $couleur_primaire: white;
 $couleur_secondaire: #ff0042;
 
@@ -32,13 +29,12 @@ $couleur_secondaire: #ff0042;
   text-align: center;
   font-weight: bold;
   color: $couleur_secondaire;
-  border: solid 2px white;
-  width: 52%;
+  width: 55%;
   margin: 0 auto;
   margin-top: 40px;
   font-family: "Roboto", sans-serif;
   &__Text {
-    font-size: 75px;
+    font-size: 70px;
   }
 }
 #Start--Button {
@@ -88,7 +84,6 @@ $couleur_secondaire: #ff0042;
   font-family: AceRecords;
   font-size: 55px;
   color: $couleur_secondaire;
-  
 }
 #Main--Search {
   display: flex;
@@ -121,64 +116,170 @@ $couleur_secondaire: #ff0042;
     width: 90%;
     margin: 0 auto;
     margin-top: 1%;
+
     &__Title {
-        color: $couleur_primaire;
-        font-size: 50px;
-        font-family: roboto;
-        border-bottom: solid 2px $couleur_secondaire;
-        width:20%;
-        margin: 0 auto;
+      color: $couleur_primaire;
+      font-size: 30px;
+      font-family: roboto;
+      border-bottom: solid 2px $couleur_secondaire;
+      width: 20%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
     }
 
     &__Image {
       width: 60%;
-      height: 600px;
+      height: 400px;
     }
     &__Text {
-        width:40%;
-        height: 600px;
-        background-color: #1E2128;
-       
-       
-        & h2 {
-          color : white;
-          font-size: 40px;
-          width: 60%;
-          margin: 0 auto;
-          padding: 5px;
-          margin-bottom: 15px;
-          border-bottom: solid 2px $couleur_secondaire;
-        } 
-        & p {
-          width: 95%;
-          margin: 0 auto;
-          font-size: 25px;
-          height: 70%;
-          overflow: auto;
-         color: white;
-        }
+      width: 40%;
+      height: 400px;
+      background-color: #1e2128;
 
+      & h2 {
+        color: white;
+        font-size: 25px;
+        width: 60%;
+        margin: 0 auto;
+        padding: 5px;
+        margin-bottom: 15px;
+        border-bottom: solid 2px $couleur_secondaire;
+      }
+      & p {
+        width: 95%;
+        margin: 0 auto;
+        font-size: 20px;
+        height: 70%;
+        overflow: auto;
+        color: white;
+      }
     }
   }
 }
 
 #Button--Watch {
   background-color: $couleur_secondaire;
-  font-size: 30px;
-  padding: 15px;
+  font-size: 20px;
+  padding: 10px;
   border-radius: 50px;
   color: $couleur_primaire;
   font-weight: bold;
   outline: none;
   margin: 0 auto;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .Onclick {
   cursor: pointer;
 }
+//
 
+.flex-caption {
+  width: 96%;
+  padding: 2%;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+// FILMS
+
+.Films__title {
+  color: $couleur_secondaire;
+  margin-top: 50px;
+  font-size: 30px;
+  margin-left: 10px;
+  padding: 10px;
+  border-bottom: solid $couleur_secondaire 2px;
+}
+
+.Home_Card_TheCards {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border: solid 2px $couleur_secondaire;
+  margin: 50px;
+  height: 500px;
+  overflow: auto;
+  padding: 10px;
+}
+
+.Home_Card_TheCard {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: 250px;
+  height: 250px;
+  &__title {
+    border-bottom: solid 2px $couleur_secondaire;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 20%;
+    margin: 0 auto;
+    width: 80%;
+
+    & h3 {
+      color: $couleur_primaire;
+      font-size: 20px;
+    }
+  }
+  &__image {
+    height: 200px;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.Home_Card_TheCard__image:hover {
+  transform: scale(1.1);
+  margin-left: 20px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+.Home_Card_TheCard:nth-child(10) {
+  display: none;
+}
+.BgColorImg {
+  height: 200px;
+  height: 80%;
+  background-color: $couleur_secondaire;
+}
+
+//BOOTSTRAP
+
+.ButtonInfo {
+  width: 25px;
+  height: 25px;
+  color: $couleur_primaire;
+  background-color: #ff0042;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 100%;
+  margin: 0 auto
+}
+
+.CustomModel {
+  background-color: #15181d;
+
+}
+
+.WidthModel {
+ 
+  height: 600px;
+}
+
+.ImageModel {
+
+  width: 100%;
+}
 @include MediaQueries;
-
-
-

@@ -1,4 +1,5 @@
 import "../Styles/Sass/style.scss";
+
 import Icon_SearchBar from "../Images/search-solid.svg";
 function Main(props) {
   return (
