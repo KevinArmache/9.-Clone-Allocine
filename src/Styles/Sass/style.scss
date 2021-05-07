@@ -24,9 +24,11 @@ $couleur_secondaire: #ff0042;
   padding: 0;
   box-sizing: border-box;
 }
-
-.MyHome {
-  display: null;
+.ShowHome {
+  display: block;
+}
+.HideHome {
+  display: none;
 }
 
 #Start {
@@ -257,6 +259,40 @@ $couleur_secondaire: #ff0042;
   background-color: $couleur_secondaire;
 }
 
+// Searching
+.Cards_Results {
+display: flex;
+border: solid 2px white;
+justify-content: space-evenly;
+flex-wrap: wrap;
+}
+.ShowCard{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border: solid 2px #15181d;
+width: 250px;
+height: 250px;
+padding: 5px;
+margin: 5px;
+&:hover {
+  border: solid 2px $couleur_secondaire;
+  border-radius: 20px;
+  transition: all 0.5s linear;
+}
+& h2 {
+  font-size: 20px;
+}
+&_image {
+
+width: 200px;
+height: 200px;
+margin: 0 auto;
+border-radius: 20px;
+
+}
+}
 //BOOTSTRAP
 
 .ButtonInfo {

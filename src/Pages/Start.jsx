@@ -1,10 +1,11 @@
 import "../Styles/Sass/style.scss";
 import "../Styles/Sass/Ocean.scss";
+import CardResults from "../Components/CardResults.jsx"
 
 function Start() {
   return (
     <>
-     
+     <div className="MyHome">
         <div id="Start">
           <h1 id="Start__Text">PREMIERE PLATEFORME DE STREAMING EN LIGNE</h1>
         </div>
@@ -15,7 +16,7 @@ function Start() {
           <div class="wave"></div>
           <div class="wave"></div>
         </div> */}
- 
+ </div>
     </>
   );
 }

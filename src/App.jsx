@@ -19,17 +19,11 @@ function App() {
   const handleChange = (e) => {
     setSearch(e.target.value.replace(" ", "+"));
   };
-  useEffect(function(){
-    let MyHome = document.querySelector(".MyHome")
-    
-    // Search ? MyHome.style.display = "none" : MyHome.style.display = "block"
-    
-  }, [Search])
 
   // Search
 
   const [SearchMovies, SetSearchMovies] = useState([]);
-
+  let HelpForClear = [];
   const handleClick = () => {
     fetch(Url)
       .then((res) => res.json())
@@ -38,16 +32,33 @@ function App() {
         console.log(SearchResult);
         SetSearchMovies(SearchResult);
       });
+    let CardsResults = document.querySelector(".Cards_Results");
 
+    if (Search !== "") {
+      CardsResults.style.display = "block";
+    }
 
+    HelpForClear.push("Clear");
+    console.log(HelpForClear);
   };
+  useEffect(
+    function () {
+      let MyHome = document.querySelector(".MyHome");
+      let CardsResults = document.querySelector(".Cards_Results");
+      let CardResults = document.querySelector(".Card_Results");
 
- 
+      if (Search === "") {
+        CardsResults.style.display = "none";
 
+        console.log("false");
+      } else {
+        console.log("true");
+      }
+    },
+    [Search]
+  );
 
-// 
-
-// First Fetch
+  // First Fetch
   const [TopMovies, SetTopMovies] = useState([]);
 
   useEffect(function () {
@@ -81,7 +92,7 @@ function App() {
         SetPopularMovies(PopularMovies);
       });
   }, []);
-// Nouveautes
+  // Nouveautes
   const [Upcoming, SetUpcoming] = useState([]);
 
   useEffect(function () {
@@ -93,11 +104,14 @@ function App() {
         SetUpcoming(data.results);
       });
   }, []);
- 
 
   return (
     <BrowserRouter>
-      <Main eChange={handleChange} eClick={handleClick} ResultsSearch={SearchMovies} />
+      <Main
+        eChange={handleChange}
+        eClick={handleClick}
+        ResultsSearch={SearchMovies}
+      />
       <Route exact path="/" component={Start} />
       <Route Acceuil path="/Acceuil">
         <Acceuil data={TopMovies} popular={PopularMovies} upcoming={Upcoming} />
