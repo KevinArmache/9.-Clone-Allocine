@@ -14,30 +14,35 @@ function Carousel({ data }) {
             className="active"
             aria-current="true"
             aria-label="Slide 1"
+
           ></button>
           <button
             type="button"
             data-mdb-target="#carouselExampleCaptions"
             data-mdb-slide-to="1"
             aria-label="Slide 2"
+
           ></button>
           <button
             type="button"
             data-mdb-target="#carouselExampleCaptions"
             data-mdb-slide-to="2"
             aria-label="Slide 3"
+
           ></button>
           <button
             type="button"
             data-mdb-target="#carouselExampleCaptions"
             data-mdb-slide-to="3"
             aria-label="Slide 4"
+
           ></button>
           <button
             type="button"
             data-mdb-target="#carouselExampleCaptions"
             data-mdb-slide-to="4"
             aria-label="Slide 5"
+
           ></button>
           <button
             type="button"
@@ -139,8 +144,7 @@ function Carousel({ data }) {
         <div className="carousel-inner">
           <div className="carousel-item active FirstSlideCarousel">
             <div className="carousel-caption d-none d-md-block">
-              <h1>TOP 20 DES MEILLEURS FILMS</h1>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h1 className="CarouselFirstSlide">TOP 20 DES MEILLEURS FILMS</h1>
             </div>
           </div>
           {data.map(function (element) {

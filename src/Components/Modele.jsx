@@ -32,7 +32,7 @@ function Modele({ data }) {
                 aria-label="Close"
               ></button>
             </div>
-            <div className="modal-body ModalBodyCustom  ">
+            <div className="modal-body">
               <img
                 className="ImageModel"
                 src={
@@ -51,7 +51,7 @@ function Modele({ data }) {
                 className="btn btn-secondary BtnColorModal"
                 data-mdb-dismiss="modal"
               >
-                Close
+                Fermer
               </button>
             </div>
           </div>
