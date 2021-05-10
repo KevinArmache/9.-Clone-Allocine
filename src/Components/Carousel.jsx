@@ -93,43 +93,43 @@ function Carousel({ data }) {
             data-mdb-slide-to="13"
             aria-label="Slide 14"
           ></button>
-                    <button
+          <button
             type="button"
             data-mdb-target="#carouselExampleCaptions"
             data-mdb-slide-to="14"
             aria-label="Slide 15"
           ></button>
-                              <button
+          <button
             type="button"
             data-mdb-target="#carouselExampleCaptions"
             data-mdb-slide-to="15"
             aria-label="Slide 16"
           ></button>
-                                        <button
+          <button
             type="button"
             data-mdb-target="#carouselExampleCaptions"
             data-mdb-slide-to="16"
             aria-label="Slide 17"
           ></button>
-                                                  <button
+          <button
             type="button"
             data-mdb-target="#carouselExampleCaptions"
             data-mdb-slide-to="17"
             aria-label="Slide 18"
           ></button>
-                                                            <button
+          <button
             type="button"
             data-mdb-target="#carouselExampleCaptions"
             data-mdb-slide-to="18"
             aria-label="Slide 19"
           ></button>
-                                                                      <button
+          <button
             type="button"
             data-mdb-target="#carouselExampleCaptions"
             data-mdb-slide-to="19"
             aria-label="Slide 20"
           ></button>
-                                                                                <button
+          <button
             type="button"
             data-mdb-target="#carouselExampleCaptions"
             data-mdb-slide-to="20"
@@ -137,14 +137,9 @@ function Carousel({ data }) {
           ></button>
         </div>
         <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img
-              src="https://mdbootstrap.com/img/new/slides/041.jpg"
-              className="d-block w-100 ImageCarousel"
-              alt="..."
-            />
+          <div className="carousel-item active FirstSlideCarousel">
             <div className="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
+              <h1>TOP 20 DES MEILLEURS FILMS</h1>
               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
             </div>
           </div>
@@ -160,10 +155,10 @@ function Carousel({ data }) {
                   alt="..."
                 />
                 <div className="carousel-caption d-none d-md-block">
-                  <h5>Second slide label</h5>
-                  <p>
+                  <h2 className="Title_Carousel">{element.title}</h2>
+                  {/* <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
+                  </p> */}
                 </div>
               </div>
             );
