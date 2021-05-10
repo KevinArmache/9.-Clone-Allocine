@@ -3,11 +3,9 @@ import CardResults from "../Components/CardResults.jsx"
 
 import Icon_SearchBar from "../Images/search-solid.svg";
 function Main(props) {
-  console.log(props.ResultsSearch)
   return (
     <>
     <nav>
-      
       <div id="Main">
         <p id="Main--Logo">KA</p>
         <div id="Main--title">

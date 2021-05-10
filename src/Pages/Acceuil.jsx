@@ -1,18 +1,15 @@
 import Slides from "../Components/Slides.jsx";
 import "../Styles/Sass/style.scss";
 import Modele from "../Components/Modele.jsx";
-
+import Carousel from "../Components/Carousel.jsx"
 function Acceuil({ popular, data, upcoming }) {
   return (
 
   <>
+ 
     <div className="MyHome">
       <h1 id="OnTheTop__Card__Title">A LA UNE</h1>
-      <Slides
-        titre={data.original_title}
-        description={data.overview}
-        image={"https://image.tmdb.org/t/p/w500/" + data.backdrop_path}
-      />
+      <Carousel data={data} />
       <h2 className="Films__title">Populaires</h2>
 
       <div className="Home_Card_TheCards">

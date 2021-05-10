@@ -1,10 +1,8 @@
-import "../Styles/Sass/style.scss"
+import "../Styles/Sass/style.scss";
 
-function Modele({data}) {
+function Modele({ data }) {
   return (
-
     <>
-
       <button
         type="button"
         className="ButtonInfo"
@@ -34,16 +32,24 @@ function Modele({data}) {
               ></button>
             </div>
             <div className="modal-body ModalBodyCustom  ">
-           <img className="ImageModel" src={"https://image.tmdb.org/t/p/original" + data.backdrop_path + " "} alt=""/> 
-            {data.overview}
+              <img
+                className="ImageModel"
+                src={
+                  "https://image.tmdb.org/t/p/original" +
+                  data.backdrop_path +
+                  " "
+                }
+                alt=""
+              />
+              {data.overview}
               ...
-            
             </div>
             <div className="modal-footer">
               <button
                 type="button"
                 className="btn btn-secondary"
-                data-mdb-dismiss="modal">
+                data-mdb-dismiss="modal"
+              >
                 Close
               </button>
             </div>
@@ -53,6 +59,5 @@ function Modele({data}) {
     </>
   );
 }
-
 
 export default Modele;

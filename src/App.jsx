@@ -4,6 +4,7 @@ import Start from "./Pages/Start.jsx";
 import Main from "./Components/Main.jsx";
 import { useState, useEffect } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
+import Carousel from "./Components/Carousel.jsx";
 
 function App() {
   const [Search, setSearch] = useState(null);
@@ -37,7 +38,6 @@ function App() {
     if (Search !== "") {
       CardsResults.style.display = "flex";
     }
-
   };
   useEffect(
     function () {
@@ -65,13 +65,10 @@ function App() {
     )
       .then((res) => res.json())
       .then(function (data) {
-        let DataMapped = data.results[3];
-        //  let DataMapped = data.results.map(function (element, index) {
-        //    console.log(data.results[3]);
-        //    return element;
-        // });
-        SetTopMovies(DataMapped);
-      });
+        SetTopMovies(data.results);
+       
+        });
+        
   }, []);
 
   // POPULAR_MOVIES

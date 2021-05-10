@@ -8,6 +8,19 @@ $couleur_secondaire: #ff0042;
   padding: 0;
   box-sizing: border-box;
 }
+
+// Scrollbar 
+*::-webkit-scrollbar-track {
+  background: #15181d;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $couleur_secondaire;
+  border-radius: 20px;
+  border: 3px solid #15181d;
+}
+
+// end scrollbar
 @font-face {
   font-family: "AceRecords";
   src: url("../../Police/ace-records/AceRecords.ttf");
@@ -338,13 +351,27 @@ border-radius: 20px;
 
   width: 100%;
 }
-.ModalBodyCustom  {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none ;  /* Firefox */
-  overflow: scroll;
-}
-.ModalBodyCustom::-webkit-scrollbar {
-  display: none ;
+* {
+  scrollbar-width: thin;
+  scrollbar-color: blue orange;
 }
 
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+
+// Caroussel 
+
+#carouselExampleCaptions {
+  width: 100% ;
+}
+.ImageCarousel {
+ 
+  height: 500px;
+}
+.test {
+  display: none !important;
+}
 @include MediaQueries;
