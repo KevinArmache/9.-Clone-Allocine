@@ -90,6 +90,7 @@ $couleur_secondaire: #ff0042;
   font-family: AceRecords;
   font-size: 55px;
   color: $couleur_secondaire;
+  margin-bottom: -0.7rem !important;
 }
 #Main--Search {
   display: flex;
@@ -101,7 +102,20 @@ $couleur_secondaire: #ff0042;
   font-size: 20px;
   font-weight: Bold;
   color: $couleur_secondaire;
-  background: none;
+  background-color: #15181d;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active
+{
+ -webkit-box-shadow: 0 0 0 30px #15181d inset !important;
+ -webkit-text-fill-color: $couleur_secondaire !important;
+
+}
+#Main--Search input:focus {
+
+  background-color: #15181d;
 }
 
 #OnTheTop__Column {
@@ -132,6 +146,7 @@ $couleur_secondaire: #ff0042;
       margin: 0 auto;
       display: flex;
       justify-content: center;
+      margin-top: 20px;
     }
 
     &__Image {
@@ -262,7 +277,7 @@ $couleur_secondaire: #ff0042;
 // Searching
 .Cards_Results {
 display: flex;
-border: solid 2px white;
+border: solid 2px #15181d;
 justify-content: space-evenly;
 flex-wrap: wrap;
 }
@@ -272,9 +287,10 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 border: solid 2px #15181d;
-width: 250px;
+width: 300px;
 height: 250px;
 padding: 5px;
+overflow: hidden;
 margin: 5px;
 &:hover {
   border: solid 2px $couleur_secondaire;
@@ -322,4 +338,13 @@ border-radius: 20px;
 
   width: 100%;
 }
+.ModalBodyCustom  {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none ;  /* Firefox */
+  overflow: scroll;
+}
+.ModalBodyCustom::-webkit-scrollbar {
+  display: none ;
+}
+
 @include MediaQueries;

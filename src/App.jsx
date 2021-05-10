@@ -23,7 +23,7 @@ function App() {
   // Search
 
   const [SearchMovies, SetSearchMovies] = useState([]);
-  let HelpForClear = [];
+
   const handleClick = () => {
     fetch(Url)
       .then((res) => res.json())
@@ -35,11 +35,9 @@ function App() {
     let CardsResults = document.querySelector(".Cards_Results");
 
     if (Search !== "") {
-      CardsResults.style.display = "block";
+      CardsResults.style.display = "flex";
     }
 
-    HelpForClear.push("Clear");
-    console.log(HelpForClear);
   };
   useEffect(
     function () {

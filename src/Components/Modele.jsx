@@ -13,7 +13,6 @@ function Modele({data}) {
       >
         !
       </button>
-
       <div
         className="modal fade "
         id={"exampleModal" + data.id}
@@ -34,7 +33,7 @@ function Modele({data}) {
                 aria-label="Close"
               ></button>
             </div>
-            <div className="modal-body ">
+            <div className="modal-body ModalBodyCustom  ">
            <img className="ImageModel" src={"https://image.tmdb.org/t/p/original" + data.backdrop_path + " "} alt=""/> 
             {data.overview}
               ...
