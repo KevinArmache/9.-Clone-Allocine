@@ -237,6 +237,7 @@ input:-webkit-autofill:active {
   font-size: 30px;
   margin-left: 10px;
   padding: 10px;
+  text-align: center;
   border-bottom: solid $couleur_secondaire 2px;
 }
 
@@ -245,11 +246,11 @@ input:-webkit-autofill:active {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  border: solid 2px $couleur_secondaire;
   margin: 50px;
   height: 500px;
   overflow: auto;
   padding: 10px;
+  width: 96.3%;
 }
 
 .Home_Card_TheCard {
@@ -333,19 +334,20 @@ input:-webkit-autofill:active {
 .ModalBodyCustom {
   overflow-y: scroll;
 }
-//BOOTSTRAP
+//BOOTSTRAP MODAL
 
 .ButtonInfo {
-  width: 25px;
-  height: 25px;
-  color: $couleur_primaire;
-  background-color: #ff0042;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  border-radius: 100%;
+  background-color: #15181d;
   margin: 0 auto;
+  border: none;
+  
+}
+.ColorBtnSynopsis {
+  color: $couleur_secondaire;
 }
 
 .CustomModel {
@@ -359,8 +361,15 @@ input:-webkit-autofill:active {
 .ImageModel {
   width: 100%;
 }
-
-
+.modal-footer{
+  border: none;
+}
+.modal-title  {
+  color: $couleur_secondaire;
+}
+.BtnColorModal {
+  background-color: $couleur_secondaire;
+}
 // CAROUSEL
 
 #carouselExampleCaptions {

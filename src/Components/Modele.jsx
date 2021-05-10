@@ -1,6 +1,7 @@
 import "../Styles/Sass/style.scss";
 
 function Modele({ data }) {
+  console.log(data)
   return (
     <>
       <button
@@ -9,7 +10,7 @@ function Modele({ data }) {
         data-mdb-toggle="modal"
         data-mdb-target={"#exampleModal" + data.id}
       >
-        !
+        <button type="button" class="btn btn-dark btn-rounded ColorBtnSynopsis">SYNOPSIS</button>
       </button>
       <div
         className="modal fade "
@@ -47,7 +48,7 @@ function Modele({ data }) {
             <div className="modal-footer">
               <button
                 type="button"
-                className="btn btn-secondary"
+                className="btn btn-secondary BtnColorModal"
                 data-mdb-dismiss="modal"
               >
                 Close
