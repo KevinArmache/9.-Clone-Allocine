@@ -1,14 +1,12 @@
-import Slides from "../Components/Slides.jsx";
 import "../Styles/Sass/style.scss";
 import Modele from "../Components/Modele.jsx";
 import Carousel from "../Components/Carousel.jsx"
 
-function Acceuil({ popular, data, upcoming }) {
 
+function Acceuil({ popular, data, upcoming}) {
   return (
 
   <>
- 
     <div className="MyHome">
       <h1 id="OnTheTop__Card__Title">A LA UNE</h1>
       <Carousel data={data} />

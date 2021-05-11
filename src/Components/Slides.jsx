@@ -1,6 +1,4 @@
 import "../Styles/Sass/style.scss";
-import FlecheGauche from "../Images/chevron-circle-left-solid.svg";
-import FlecheDroite from "../Images/chevron-circle-right-solid.svg";
 import Carousel  from "../Components/Carousel.jsx"
 
 const Slides = (props) => {

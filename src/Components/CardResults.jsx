@@ -1,7 +1,4 @@
-import Modal from "../Components/Modele.jsx"
-
 function CardResults(props) {
-  console.log(props.ResultsSearch);
   return (
     <>
       <div>

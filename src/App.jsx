@@ -2,9 +2,9 @@ import "./Styles/Sass/style.scss";
 import Acceuil from "./Pages/Acceuil.jsx";
 import Start from "./Pages/Start.jsx";
 import Main from "./Components/Main.jsx";
+import Films from "./Pages/Films.jsx"
 import { useState, useEffect } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-import Carousel from "./Components/Carousel.jsx";
 
 function App() {
   const [Search, setSearch] = useState(null);
@@ -43,14 +43,13 @@ function App() {
     function () {
     
       let CardsResults = document.querySelector(".Cards_Results");
-      let CardResults = document.querySelector(".Card_Results");
+    
 
       if (Search === "") {
         CardsResults.style.display = "none";
 
-        console.log("false");
       } else {
-        console.log("true");
+     
       }
     },
     [Search]
@@ -100,6 +99,8 @@ function App() {
       });
   }, []);
 
+
+
   return (
     <BrowserRouter>
       <Main
@@ -109,8 +110,9 @@ function App() {
       />
       <Route exact path="/" component={Start} />
       <Route Acceuil path="/Acceuil">
-        <Acceuil data={TopMovies} popular={PopularMovies} upcoming={Upcoming} />
+        <Acceuil data={TopMovies} popular={PopularMovies}  upcoming={Upcoming} />
       </Route>
+      <Route Film path="/Films" component={Films} />
     </BrowserRouter>
   );
 }

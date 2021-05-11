@@ -14,8 +14,7 @@ function Modele({ data, popular }) {
       .then(function (details) {
         SetDetails(details);
       });
-  }, []);
-console.log(Details)
+  }, [data.id]);
   return (
     <>
       <button

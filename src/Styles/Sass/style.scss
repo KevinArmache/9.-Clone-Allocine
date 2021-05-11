@@ -417,4 +417,20 @@ input:-webkit-autofill:active {
 .CarouselFirstSlide {
   color: $couleur_secondaire;
 }
+
+// FILMS PAGES
+
+.Category {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  & button {
+    margin: 5px;
+    border: solid 2px  #15181d;
+    &:hover {
+      border: solid 2px  $couleur_secondaire;
+    }
+  }
+}
+
 @include MediaQueries;

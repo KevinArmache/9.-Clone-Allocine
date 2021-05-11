@@ -1,6 +1,5 @@
 import "../Styles/Sass/style.scss";
 import "../Styles/Sass/Ocean.scss";
-import CardResults from "../Components/CardResults.jsx"
 
 function Start() {
   return (
