@@ -2,7 +2,9 @@ import Slides from "../Components/Slides.jsx";
 import "../Styles/Sass/style.scss";
 import Modele from "../Components/Modele.jsx";
 import Carousel from "../Components/Carousel.jsx"
+
 function Acceuil({ popular, data, upcoming }) {
+
   return (
 
   <>
@@ -53,7 +55,7 @@ function Acceuil({ popular, data, upcoming }) {
                 />
               </div>
               <div className="Home_Card_TheCard__title">
-                <h3>{element.original_title}</h3>
+                <h3>{element.title}</h3>
               </div>
               <Modele data={element} />
             </div>

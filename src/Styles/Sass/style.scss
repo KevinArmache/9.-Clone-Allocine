@@ -376,6 +376,16 @@ input:-webkit-autofill:active {
     background-color: $couleur_secondaire;
   }
 }
+.Number_of_views {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
 // CAROUSEL
 
 #carouselExampleCaptions {

@@ -41,7 +41,7 @@ function App() {
   };
   useEffect(
     function () {
-      let MyHome = document.querySelector(".MyHome");
+    
       let CardsResults = document.querySelector(".Cards_Results");
       let CardResults = document.querySelector(".Card_Results");
 
