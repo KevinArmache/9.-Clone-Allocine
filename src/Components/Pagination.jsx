@@ -4,7 +4,7 @@ function Pagination () {
         <nav aria-label="Page navigation example">
   <ul className="pagination">
     <li className="page-item">
-      <a className="page-link" href="#" aria-label="Previous">
+      < a className="page-link" href="#" aria-label="Previous">
         <span aria-hidden="true">&laquo;</span>
       </a>
     </li>

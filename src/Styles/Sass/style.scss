@@ -256,6 +256,7 @@ input:-webkit-autofill:active {
 .Home_Card_TheCard {
   display: flex;
   flex-direction: column;
+  justify-content:center;
   margin: 30px;
   width: 250px;
   height: 250px;
@@ -264,14 +265,20 @@ input:-webkit-autofill:active {
     display: flex;
     justify-content: center;
     text-align: center;
+    margin: 0 auto !important;
     align-items: center;
-    height: 20%;
-    margin: 0 auto;
-    width: 80%;
+    height: 50px;
+    width: 100%;
+    margin: 10px;
+    text-overflow: ellipsis;
+
 
     & h3 {
       color: $couleur_primaire;
-      font-size: 20px;
+      font-size: 20px;  
+      text-overflow: ellipsis;
+    overflow: hidden;
+
     }
   }
   &__image {
@@ -419,11 +426,12 @@ input:-webkit-autofill:active {
 }
 
 
-// FILMS PAGES
+// CATEGORY PAGES
 
 .Category {
   display: flex;
   justify-content: space-evenly;
+  border: solid 2px white;
   flex-wrap: wrap;
   & button {
     margin: 5px;
@@ -432,7 +440,13 @@ input:-webkit-autofill:active {
       border: solid 2px  $couleur_secondaire;
     }
   }
+  &__Results {
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 2px white;
+  }
 }
+
 
 // Pagination 
 .pagination {
