@@ -6,10 +6,10 @@ function Start() {
     <>
      <div className="MyHome">
         <div id="Start">
-          <h1 id="Start__Text">PREMIERE PLATEFORME DE STREAMING EN LIGNE</h1>
+          <h1 id="Start__Text">FIRST ONLINE STREAMING PLATFORM</h1>
         </div>
         <div id="Start--Button">
-          <a href="/Acceuil">Commencer</a>
+          <a href="/Acceuil">START</a>
         </div>
         {/* <div class="ocean">
           <div class="wave"></div>

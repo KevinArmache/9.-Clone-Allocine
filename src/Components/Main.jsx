@@ -9,10 +9,10 @@ function Main(props) {
       <div id="Main">
         <p id="Main--Logo">KA</p>
         <div id="Main--title">
-          <a href="/Acceuil">Acceuil</a>
-          <a href="/Films">Films</a>
+          <a href="/Acceuil">Home</a>
+          <a href="/Films">Movies</a>
           <a href="/Series">Series</a>
-          <a href="/Mangas">Mangas</a>
+          {/* <a href="/Mangas">Mangas</a> */}
         </div>
         <div>
           <label htmlFor="Main--Search" id="Main--Search">

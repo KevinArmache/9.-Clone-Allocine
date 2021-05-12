@@ -8,7 +8,7 @@ function Category() {
   const [Category, setCategory] = useState([]);
   useEffect(function () {
     fetch(
-      "https://api.themoviedb.org/3/genre/movie/list?api_key=4521ea8693f4def400a9777ba95e0bc2&language=fr-FR"
+      "https://api.themoviedb.org/3/genre/movie/list?api_key=4521ea8693f4def400a9777ba95e0bc2&language=en-US"
     )
       .then((res) => res.json())
       .then(function (data) {

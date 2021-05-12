@@ -60,7 +60,7 @@ function App() {
 
   useEffect(function () {
     fetch(
-      "https://api.themoviedb.org/3/movie/top_rated?api_key=4521ea8693f4def400a9777ba95e0bc2&language=fr-FR&page=1"
+      "https://api.themoviedb.org/3/movie/top_rated?api_key=4521ea8693f4def400a9777ba95e0bc2&language=en-US&page=1"
     )
       .then((res) => res.json())
       .then(function (data) {
@@ -76,7 +76,7 @@ function App() {
 
   useEffect(function () {
     fetch(
-      "https://api.themoviedb.org/3/movie/popular?api_key=4521ea8693f4def400a9777ba95e0bc2&language=fr-FR&page=1"
+      "https://api.themoviedb.org/3/movie/popular?api_key=4521ea8693f4def400a9777ba95e0bc2&language=en-US&page=1"
     )
       .then((res) => res.json())
       .then(function (data) {
@@ -91,7 +91,7 @@ function App() {
 
   useEffect(function () {
     fetch(
-      "https://api.themoviedb.org/3/movie/upcoming?api_key=4521ea8693f4def400a9777ba95e0bc2&language=fr-FR&page=1"
+      "https://api.themoviedb.org/3/movie/upcoming?api_key=4521ea8693f4def400a9777ba95e0bc2&language=en-US&page=1"
     )
       .then((res) => res.json())
       .then(function (data) {

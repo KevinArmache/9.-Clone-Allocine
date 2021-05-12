@@ -144,7 +144,7 @@ function Carousel({ data }) {
         <div className="carousel-inner">
           <div className="carousel-item active FirstSlideCarousel">
             <div className="carousel-caption d-none d-md-block">
-              <h1 className="CarouselFirstSlide">TOP 20 DES MEILLEURS FILMS</h1>
+              <h1 className="CarouselFirstSlide">TOP 20 BEST MOVIES</h1>
             </div>
           </div>
           {data.map(function (element) {
