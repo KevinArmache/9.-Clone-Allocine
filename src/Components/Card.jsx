@@ -14,7 +14,7 @@ function Card ({data}) {
                 />
               </div>
               <div className="Home_Card_TheCard__title">
-                <h3>{data.title}</h3>
+                <h3><nobr>{data.title}</nobr></h3>
               </div>
               <Modele data={data} />
             </div>

@@ -257,9 +257,10 @@ input:-webkit-autofill:active {
   display: flex;
   flex-direction: column;
   justify-content:center;
-  margin: 30px;
+  margin: 10px;
   width: 250px;
   height: 250px;
+  
   &__title {
     border-bottom: solid 2px $couleur_secondaire;
     display: flex;
@@ -288,12 +289,6 @@ input:-webkit-autofill:active {
   }
 }
 
-.Home_Card_TheCard__image:hover {
-  transform: scale(1.1);
-  margin-left: 20px;
-  margin-top: -20px;
-  margin-bottom: 20px;
-}
 .Home_Card_TheCard:nth-child(10) {
   display: none;
 }
@@ -431,7 +426,6 @@ input:-webkit-autofill:active {
 .Category {
   display: flex;
   justify-content: space-evenly;
-  border: solid 2px white;
   flex-wrap: wrap;
   & button {
     margin: 5px;
@@ -443,7 +437,13 @@ input:-webkit-autofill:active {
   &__Results {
     display: flex;
     flex-wrap: wrap;
-    border: solid 2px white;
+    justify-content: space-evenly;
+    margin: 10px;
+    height: 400px;
+    overflow: auto;
+    padding: 10px;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 

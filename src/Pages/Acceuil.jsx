@@ -17,7 +17,7 @@ function Acceuil({ popular, data, upcoming}) {
         {popular.map(function (element, index) {
           return (
             <div key={element.id} className="Home_Card_TheCard">
-              <div className="BgColorImg">
+     
                 <img
                   className="Home_Card_TheCard__image"
                   src={
@@ -25,7 +25,7 @@ function Acceuil({ popular, data, upcoming}) {
                   }
                   alt=""
                 />
-              </div>
+         
               <div className="Home_Card_TheCard__title">
                 <h3> <nobr> {element.title} </nobr></h3>
               </div>
