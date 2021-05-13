@@ -2,19 +2,37 @@ import "../Styles/Sass/style.scss";
 import Number_of_views from "../Images/eye-solid.svg";
 import { useState, useEffect } from "react";
 
-function Modele({ data, popular }) {
+function Modele({ data, popular, classIndex }) {
+  function handleOver(e) {
+    let ScaleImage = document.querySelector(`.ScaleImage-${classIndex}`)
+    ScaleImage.classList.add("ScaleImage")
+    console.log(ScaleImage)
+ 
 
+  }
+  function handleOverOut() {
+    let ScaleImage = document.querySelector(`.ScaleImage-${classIndex}`)
+    ScaleImage.classList.remove("ScaleImage")
+    console.log(ScaleImage)
+  }
   const [Details, SetDetails] = useState([]);
 
-  useEffect(function () {
-    fetch(
-      "https://api.themoviedb.org/3/movie/"+data.id+"?api_key=4521ea8693f4def400a9777ba95e0bc2&language=en-US"
-    )
-      .then((res) => res.json())
-      .then(function (details) {
-        SetDetails(details);
-      });
-  }, [data.id]);
+  useEffect(
+    function () {
+      // Loading Start
+      fetch(
+        "https://api.themoviedb.org/3/movie/" +
+          data.id +
+          "?api_key=4521ea8693f4def400a9777ba95e0bc2&language=en-US"
+      )
+        .then((res) => res.json())
+        .then(function (details) {
+          //  Loading End
+          SetDetails(details);
+        });
+    },
+    [data.id]
+  );
   return (
     <>
       <button
@@ -23,11 +41,16 @@ function Modele({ data, popular }) {
         data-mdb-toggle="modal"
         data-mdb-target={"#exampleModal" + data.id}
       >
-        <button type="button" class="btn btn-dark btn-rounded ColorBtnSynopsis">
+        <button
+          type="button"
+          className="btn btn-dark btn-rounded ColorBtnSynopsis ScaleStarter"
+          onMouseEnter={handleOver}
+          onMouseLeave={handleOverOut}
+        >
           SYNOPSIS
         </button>
       </button>
-    
+
       <div
         className="modal fade "
         id={"exampleModal" + data.id}
@@ -61,7 +84,7 @@ function Modele({ data, popular }) {
               {data.overview}
               ...
             </div>
-          
+
             <div className="modal-footer">
               <div className="Number_of_views">
                 <img src={Number_of_views} alt="" /> {Details.popularity}
