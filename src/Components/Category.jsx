@@ -16,10 +16,13 @@ function Category() {
       });
   }, []);
   // GetID By Genre
+  const [GetName, setGetName] = useState("");
   const [GetId, setGetId] = useState("");
-  function handleClick(id) {
+  function handleClick(id, name) {
     setGetId(id);
+    setGetName(name);
   }
+
 
   // DISCOVERY
   const [Discovery, setDiscovery] = useState([]);
@@ -46,7 +49,8 @@ function Category() {
               <button
                 type="button"
                 key={genre.id}
-                onClick={() => handleClick(genre.id)}
+                name={genre.name}
+                onClick={() => handleClick(genre.id , genre.name)}
                 class="btn btn-outline-light"
               >
                 {genre.name}
@@ -54,8 +58,11 @@ function Category() {
             );
           })}
         </div>
+        <p className="Category__title">{GetName}</p>
         <div className="Category__Results">
+       
           {
+            
             Discovery.map(function (element){
               return <Card data={element}/>
             })

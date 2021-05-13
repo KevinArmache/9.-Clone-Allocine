@@ -9,9 +9,9 @@ function Acceuil({ popular, data, upcoming}) {
 
   <>
     <div className="MyHome">
-      <h1 id="OnTheTop__Card__Title">ON THE TOP</h1>
+      <h1 id="OnTheTop__Card__Title"><strong>ON THE TOP</strong></h1>
       <Carousel data={data} />
-      <h2 className="Films__title">POPULAR</h2>
+      <h2 className="Films__title"><strong>POPULAR</strong></h2>
 
       <div className="Home_Card_TheCards">
         {popular.map(function (element, index) {
@@ -38,7 +38,7 @@ function Acceuil({ popular, data, upcoming}) {
 
       {/* Nouveautes */}
 
-      <h2 className="Films__title">NEWS</h2>
+      <h2 className="Films__title"><strong>NEWS</strong></h2>
 
       <div className="Home_Card_TheCards">
         {upcoming.map(function (element, index) {
