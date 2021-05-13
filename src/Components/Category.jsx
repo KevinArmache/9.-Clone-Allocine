@@ -23,7 +23,6 @@ function Category() {
     setGetName(name);
   }
 
-
   // DISCOVERY
   const [Discovery, setDiscovery] = useState([]);
   useEffect(
@@ -50,7 +49,7 @@ function Category() {
                 type="button"
                 key={genre.id}
                 name={genre.name}
-                onClick={() => handleClick(genre.id , genre.name)}
+                onClick={() => handleClick(genre.id, genre.name)}
                 class="btn btn-outline-light"
               >
                 {genre.name}
@@ -60,14 +59,10 @@ function Category() {
         </div>
         <p className="Category__title">{GetName}</p>
         <div className="Category__Results">
-       
-          {
-            
-            Discovery.map(function (element){
-              return <Card data={element}/>
-            })
-          }
-          </div>
+          {Discovery.map(function (element) {
+            return <Card data={element} />;
+          })}
+        </div>
         <div>
           <Pagination />
         </div>

@@ -2,7 +2,9 @@
 
 $couleur_primaire: white;
 $couleur_secondaire: #ff0042;
-
+* {
+  font-family: "Poppins", sans-serif;
+}
 * {
   margin: 0;
   padding: 0;
@@ -28,7 +30,6 @@ $couleur_secondaire: #ff0042;
 }
 
 /* Works on Chrome, Edge, and Safari */
-
 
 // end scrollbar
 @font-face {
@@ -81,7 +82,6 @@ $couleur_secondaire: #ff0042;
     color: white;
   }
 }
-
 
 #Main {
   display: flex;
@@ -240,7 +240,7 @@ input:-webkit-autofill:active {
   padding: 10px;
   text-align: center;
   width: 30%;
-  margin:  0 auto;
+  margin: 0 auto;
   border-bottom: solid $couleur_secondaire 2px;
 }
 
@@ -259,11 +259,11 @@ input:-webkit-autofill:active {
 .Home_Card_TheCard {
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   margin: 10px;
   width: 250px;
   height: 250px;
-  
+
   &__title {
     border-bottom: solid 2px $couleur_secondaire;
     display: flex;
@@ -276,13 +276,11 @@ input:-webkit-autofill:active {
     margin: 10px;
     text-overflow: ellipsis;
 
-
     & h3 {
       color: $couleur_primaire;
-      font-size: 20px;  
+      font-size: 20px;
       text-overflow: ellipsis;
-    overflow: hidden;
-
+      overflow: hidden;
     }
   }
   &__image {
@@ -334,8 +332,70 @@ input:-webkit-autofill:active {
     border-radius: 20px;
   }
 }
+// FOOTER
 
-
+.Footer {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: 0 auto;
+  color: $couleur_primaire;
+  font-size: 20px;
+  width: 100%;
+  &__FollowUs {
+    margin: 0 auto;
+    width: 50%;
+  }
+  & p {
+    border-bottom: solid 2px $couleur_secondaire;
+    width: 25%;
+    margin: 0 auto;
+  }
+  &__SocialMedia {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    width: 30%;
+  }
+  &__Newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
+    width: 25%;
+    float: right;
+    & label {
+      border-bottom: 2px solid $couleur_secondaire;
+      width: 40%;
+    }
+    &__Input {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 10px;
+    }
+    & input {
+      width: 70%;
+      border-radius: 10px;
+      outline:#ff0042;
+      font-size: 15px;
+    }
+    & Button {
+      background-color: $couleur_secondaire;
+      border-radius: 10px;
+      padding: 5px;
+      font-weight: bold;
+      font-size: 15px;
+      color: $couleur_primaire;
+      
+    }
+  }
+  &__Copyright {
+    width: 100% !important;
+    border: none !important;
+    font-size: 15px;
+  }
+}
 
 //BOOTSTRAP MODAL
 .modal-body {
@@ -352,7 +412,6 @@ input:-webkit-autofill:active {
   background-color: #15181d;
   margin: 0 auto;
   border: none;
-  
 }
 .ColorBtnSynopsis:hover {
   color: $couleur_secondaire;
@@ -369,10 +428,10 @@ input:-webkit-autofill:active {
 .ImageModel {
   width: 100%;
 }
-.modal-footer{
+.modal-footer {
   border: none;
 }
-.modal-title  {
+.modal-title {
   color: $couleur_secondaire;
 }
 .BtnColorModal {
@@ -405,7 +464,6 @@ input:-webkit-autofill:active {
 }
 .carousel-indicators button {
   background-color: $couleur_secondaire !important;
-
 }
 .carousel-control-prev-icon::after {
   color: $couleur_secondaire !important;
@@ -423,7 +481,6 @@ input:-webkit-autofill:active {
   color: $couleur_secondaire;
 }
 
-
 // CATEGORY PAGES
 
 .Category {
@@ -432,9 +489,9 @@ input:-webkit-autofill:active {
   flex-wrap: wrap;
   & button {
     margin: 5px;
-    border: solid 2px  #15181d;
+    border: solid 2px #15181d;
     &:hover {
-      border: solid 2px  $couleur_secondaire;
+      border: solid 2px $couleur_secondaire;
     }
   }
   &__Results {
@@ -458,8 +515,7 @@ input:-webkit-autofill:active {
   }
 }
 
-
-// Pagination 
+// Pagination
 .pagination {
   display: flex;
   justify-content: center;

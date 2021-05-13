@@ -71,7 +71,7 @@ function Modele({ data, popular }) {
                 className="btn btn-secondary BtnColorModal"
                 data-mdb-dismiss="modal"
               >
-                Close
+                <b>Close</b>
               </button>
             </div>
           </div>

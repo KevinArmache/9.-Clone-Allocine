@@ -1,8 +1,8 @@
 import "../Styles/Sass/style.scss";
 import Modele from "../Components/Modele.jsx";
-import Carousel from "../Components/Carousel.jsx"
-import Card from "../Components/Card.jsx"
-
+import Carousel from "../Components/Carousel.jsx";
+import Card from "../Components/Card.jsx";
+import Footer from "../Components/Footer"
 
 function Acceuil({ popular, data, upcoming}) {
   return (
@@ -48,6 +48,7 @@ function Acceuil({ popular, data, upcoming}) {
         })}
       </div>
     </div>
+    <Footer />
     </>
   );
 }
