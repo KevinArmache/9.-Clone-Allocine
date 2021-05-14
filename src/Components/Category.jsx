@@ -59,8 +59,9 @@ function Category() {
         </div>
         <p className="Category__title">{GetName}</p>
         <div className="Category__Results">
-          {Discovery.map(function (element) {
-            return <Card data={element} />;
+          {Discovery.map(function (element, id) {
+            console.log(id)
+            return <Card data={element} id={id}/>;
           })}
         </div>
         <div>

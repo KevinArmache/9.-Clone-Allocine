@@ -1,5 +1,4 @@
 import "../Styles/Sass/style.scss";
-import Modal from "../Components/Modal.jsx";
 import Carousel from "../Components/Carousel.jsx";
 import Card from "../Components/Card.jsx";
 import Footer from "../Components/Footer";
@@ -18,28 +17,7 @@ function Acceuil({ popular, data, upcoming }) {
 
         <div className="Home_Card_TheCards">
           {popular.map(function (element, index) {
-            return (
-              <div key={element.id} className="Home_Card_TheCard">
-                <div className="HiddenScale">
-                  <img
-                    className={`Home_Card_TheCard__image ScaleImage-${index}`}
-                    src={
-                      "https://image.tmdb.org/t/p/original/" +
-                      element.backdrop_path
-                    }
-                    alt=""
-                  />
-                </div>
-                <div className="Home_Card_TheCard__title">
-                  <h3>
-                    {" "}
-                    <nobr> {element.title} </nobr>
-                  </h3>
-                </div>
-
-                <Modal classIndex={index} data={element} />
-              </div>
-            );
+            return <Card data={element} id={index} />;
           })}
         </div>
 
@@ -51,7 +29,7 @@ function Acceuil({ popular, data, upcoming }) {
 
         <div className="Home_Card_TheCards">
           {upcoming.map(function (element, index) {
-            return <Card classIndex={index} data={element} />;
+            return <Card data={element} idNews={index} />;
           })}
         </div>
       </div>

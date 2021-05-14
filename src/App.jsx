@@ -80,7 +80,7 @@ function App() {
     )
       .then((res) => res.json())
       .then(function (data) {
-        let PopularMovies = data.results.map(function (element, image) {
+        let PopularMovies = data.results.map(function (element) {
           return element;
         });
         SetPopularMovies(PopularMovies);
@@ -95,6 +95,7 @@ function App() {
     )
       .then((res) => res.json())
       .then(function (data) {
+        
         SetUpcoming(data.results);
       });
   }, []);

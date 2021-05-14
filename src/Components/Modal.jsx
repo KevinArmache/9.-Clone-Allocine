@@ -2,16 +2,17 @@ import "../Styles/Sass/style.scss";
 import Number_of_views from "../Images/eye-solid.svg";
 import { useState, useEffect } from "react";
 
-function Modele({ data, popular, classIndex }) {
+function Modal({ data, id, idNews}) {
   function handleOver(e) {
-    let ScaleImage = document.querySelector(`.ScaleImage-${classIndex}`)
+
+
+    let ScaleImage = document.querySelector(`.ScaleImage-${id}`)
     ScaleImage.classList.add("ScaleImage")
     console.log(ScaleImage)
- 
 
   }
   function handleOverOut() {
-    let ScaleImage = document.querySelector(`.ScaleImage-${classIndex}`)
+    let ScaleImage = document.querySelector(`.ScaleImage-${id}`)
     ScaleImage.classList.remove("ScaleImage")
     console.log(ScaleImage)
   }
@@ -104,4 +105,4 @@ function Modele({ data, popular, classIndex }) {
   );
 }
 
-export default Modele;
+export default Modal;
