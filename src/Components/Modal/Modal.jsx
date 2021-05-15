@@ -1,5 +1,5 @@
-import "../Styles/Sass/style.scss";
-import Number_of_views from "../Images/eye-solid.svg";
+import "../Modal/Modal.scss";
+import Number_of_views from "../../Images/eye-solid.svg";
 import { useState, useEffect } from "react";
 
 function Modal({ data, id, idNews}) {

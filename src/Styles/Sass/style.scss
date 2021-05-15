@@ -2,6 +2,7 @@
 
 $couleur_primaire: white;
 $couleur_secondaire: #ff0042;
+
 * {
   font-family: "Poppins", sans-serif;
 }
@@ -40,22 +41,14 @@ $couleur_secondaire: #ff0042;
 body {
   background-color: #15181d !important;
 }
-$couleur_primaire: white;
-$couleur_secondaire: #ff0042;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.ShowHome {
-  display: block;
-}
-.HideHome {
-  display: none;
-}
 
-#Start {
+.Start {
   text-align: center;
   font-weight: bold;
   color: $couleur_secondaire;
@@ -63,87 +56,26 @@ $couleur_secondaire: #ff0042;
   margin: 0 auto;
   margin-top: 40px;
   font-family: "Roboto", sans-serif;
-  &__Text {
+  &-Text {
     font-size: 70px;
   }
-}
-#Start--Button {
-  font-size: 40px;
-  font-weight: bold;
-  text-align: center;
-  padding: 15px;
-  width: 20%;
-  border-radius: 40px;
-  background-color: $couleur_secondaire;
-  margin: 0 auto;
-
-  & a {
-    text-decoration: none;
-    color: white;
-  }
-}
-
-#Main {
-  display: flex;
-  justify-content: space-around;
-  border-bottom: 3px solid $couleur_secondaire;
-  width: 100%;
-  margin: 0 auto;
-  align-items: center;
-}
-#Main--title {
-  width: 30%;
-  font-size: 25px;
-  display: flex;
-  justify-content: space-evenly;
-  & a {
-    color: $couleur_primaire;
-    text-decoration: none;
+  &-Button {
+    font-size: 40px;
     font-weight: bold;
-    border-bottom: transparent solid 2px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500 !important;
-
-    &:hover {
-      border-bottom: solid 2px $couleur_secondaire;
+    text-align: center;
+    padding: 15px;
+    width: 20%;
+    border-radius: 40px;
+    background-color: $couleur_secondaire;
+    margin: 0 auto;
+  
+    & a {
+      text-decoration: none;
+      color: white;
     }
   }
 }
-
-#Main--Logo {
-  font-family: AceRecords;
-  font-size: 55px;
-  color: $couleur_secondaire;
-  margin-bottom: -0.7rem !important;
-}
-#Main--Search {
-  display: flex;
-}
-#Main--Search input {
-  border: none;
-  border-bottom: solid 2px $couleur_secondaire;
-  outline: none;
-  font-size: 20px;
-  font-weight: Bold;
-  color: $couleur_secondaire;
-  background-color: #15181d;
-}
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px #15181d inset !important;
-  -webkit-text-fill-color: $couleur_secondaire !important;
-}
-#Main--Search input:focus {
-  background-color: #15181d;
-}
-
-#OnTheTop__Column {
-  display: flex;
-  flex-direction: column;
-}
-#OnTheTop {
+.OnTheTop {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -200,10 +132,9 @@ input:-webkit-autofill:active {
     }
   }
 }
-.ScaleImage{
-      transform: scale(1.2);
-    
-  }
+.ScaleImage {
+  transform: scale(1.2);
+}
 
 #Button--Watch {
   background-color: $couleur_secondaire;
@@ -217,9 +148,7 @@ input:-webkit-autofill:active {
   margin-top: 10px;
 }
 
-.Onclick {
-  cursor: pointer;
-}
+
 //
 
 .flex-caption {
@@ -234,9 +163,20 @@ input:-webkit-autofill:active {
   line-height: 18px;
 }
 
-// FILMS
+// Movies
 
-.Films__title {
+.PopularMovies {
+  color: $couleur_secondaire;
+  margin-top: 30px;
+  font-size: 30px;
+  margin-left: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 30%;
+  margin: 0 auto;
+  border-bottom: solid $couleur_secondaire 2px;
+}
+.UpcomingMovies {
   color: $couleur_secondaire;
   margin-top: 30px;
   font-size: 30px;
@@ -248,7 +188,8 @@ input:-webkit-autofill:active {
   border-bottom: solid $couleur_secondaire 2px;
 }
 
-.Home_Card_TheCards {
+
+.Home__TheCards {
   margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -262,272 +203,19 @@ input:-webkit-autofill:active {
   border-bottom: solid 2px $couleur_secondaire;
 }
 
-.Home_Card_TheCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 10px;
-  width: 250px;
-  height: 250px;
-  
- 
-
-  &__title {
-    border-bottom: solid 2px $couleur_secondaire;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto !important;
-    align-items: center;
-    height: 50px;
-    width: 100%;
-    margin: 10px;
-    text-overflow: ellipsis;
-
-
-    & h3 {
-      color: $couleur_primaire;
-      font-size: 20px;
-      text-overflow: ellipsis;
-      overflow: hidden;
-    }
-  }
-  &__image {
-    height: 200px;
-    width: 100%;
-    transition: all 0.2s ease-in-out;
-    
-  }
-}
-.HiddenScale {
-  height: 200px;
-  width: 100%;
-  transition: all 0.3s ease-in-out;
-  overflow: hidden;
-
-}
-
 .BgColorImg {
   height: 200px;
   height: 80%;
   background-color: $couleur_secondaire;
 }
 
-// Searching
-.Cards_Results {
-  display: flex;
-  border: solid 2px #15181d;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-.ShowCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: solid 2px #15181d;
-  width: 300px;
-  height: 250px;
-  padding: 5px;
-  overflow: hidden;
-  margin: 5px;
-  &:hover {
-    border: solid 2px $couleur_secondaire;
-    border-radius: 20px;
-    transition: all 0.5s linear;
-  }
-  & h2 {
-    font-size: 20px;
-  }
-  &_image {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-    border-radius: 20px;
-  }
-}
 // FOOTER
 
-.Footer {
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center;
-  margin: 0 auto;
-  color: $couleur_primaire;
-  font-size: 20px;
-  width: 100%;
-  &__FollowUs {
-    margin: 0 auto;
-    width: 50%;
-  }
-  & p {
-    border-bottom: solid 2px $couleur_secondaire;
-    width: 25%;
-    margin: 0 auto;
-  }
-  &__SocialMedia {
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 10px;
-    width: 30%;
-  }
-  &__Newsletter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid white;
-    width: 25%;
-    float: right;
-    & label {
-      border-bottom: 2px solid $couleur_secondaire;
-      width: 40%;
-    }
-    &__Input {
-      display: flex;
-      justify-content: space-evenly;
-      padding: 10px;
-    }
-    & input {
-      width: 70%;
-      border-radius: 10px;
-      outline:#ff0042;
-      font-size: 15px;
-    }
-    & Button {
-      background-color: $couleur_secondaire;
-      border-radius: 10px;
-      padding: 5px;
-      font-weight: bold;
-      font-size: 15px;
-      color: $couleur_primaire;
-      
-    }
-  }
-  &__Copyright {
-    width: 100% !important;
-    border: none !important;
-    font-size: 15px;
-  }
-}
 
 //BOOTSTRAP MODAL
-.modal-body {
-  overflow-y: scroll;
-}
-.modal-header {
-  border-bottom: solid 2px $couleur_secondaire !important;
-}
-.ButtonInfo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  background-color: #15181d;
-  margin: 0 auto;
-  border: none;
-}
-.ColorBtnSynopsis:hover {
-  color: $couleur_secondaire;
-}
-
-.CustomModel {
-  background-color: #15181d;
-}
-
-.WidthModel {
-  height: 600px;
-}
-
-.ImageModel {
-  width: 100%;
-}
-.modal-footer {
-  border: none;
-}
-.modal-title {
-  color: $couleur_secondaire;
-}
-.BtnColorModal {
-  background-color: $couleur_secondaire;
-  &:hover {
-    background-color: $couleur_secondaire;
-  }
-}
-.Number_of_views {
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-}
-.modal-footer {
-  display: flex;
-  justify-content: space-between;
-}
-
-// CAROUSEL
-
-#carouselExampleCaptions {
-  width: 100%;
-}
-.ImageCarousel {
-  height: 450px;
-}
-.FirstSlideCarousel {
-  width: 100%;
-  height: 450px;
-}
-.carousel-indicators button {
-  background-color: $couleur_secondaire !important;
-}
-.carousel-control-prev-icon::after {
-  color: $couleur_secondaire !important;
-}
-.carousel-control-next-icon::after {
-  color: $couleur_secondaire !important;
-}
-.Title_Carousel {
-  border: solid 2px $couleur_secondaire;
-  width: 50%;
-  margin: 0 auto;
-  background-color: $couleur_secondaire;
-}
-.CarouselFirstSlide {
-  color: $couleur_secondaire;
-}
 
 // CATEGORY PAGES
 
-.Category {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  & button {
-    margin: 5px;
-    border: solid 2px #15181d;
-    &:hover {
-      border: solid 2px $couleur_secondaire;
-    }
-  }
-  &__Results {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: 10px;
-    height: 400px;
-    overflow: auto;
-    padding: 10px;
-    width: 100%;
-    margin: 0 auto;
-  }
-  &__title {
-    text-align: center;
-    font-size: 30px;
-    color: $couleur_secondaire;
-    font-weight: bold;
-    width: 20%;
-    margin: 0 auto;
-  }
-}
 
 // Pagination
 .pagination {

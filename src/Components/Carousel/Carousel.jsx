@@ -1,10 +1,14 @@
+/* eslint-disable react/jsx-no-duplicate-props */
+import "../Carousel/Carousel.scss";
+
 function Carousel({ data }) {
+
   return (
     <>
       <div
-        id="carouselExampleCaptions"
-        className="carousel slide"
+        className="carouselExampleCaptions"
         data-mdb-ride="carousel"
+        className="carousel slide"
       >
         <div className="carousel-indicators">
           <button
@@ -148,8 +152,9 @@ function Carousel({ data }) {
             </div>
           </div>
           {data.map(function (element) {
+
             return (
-              <div className="carousel-item" key={data.id}>
+              <div className="carousel-item" key={element.id}>
                 <img
                   src={
                     "https://image.tmdb.org/t/p/original" +
@@ -160,9 +165,6 @@ function Carousel({ data }) {
                 />
                 <div className="carousel-caption d-none d-md-block">
                   <h2 className="Title_Carousel">{element.title}</h2>
-                  {/* <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p> */}
                 </div>
               </div>
             );

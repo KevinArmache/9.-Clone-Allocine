@@ -1,0 +1,36 @@
+$couleur_primaire: white;
+$couleur_secondaire: #ff0042;
+
+
+.Category {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    & button {
+      margin: 5px;
+      border: solid 2px #15181d;
+      &:hover {
+        border: solid 2px $couleur_secondaire;
+      }
+    }
+    &__Results {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin: 10px;
+      height: 400px;
+      overflow: auto;
+      padding: 10px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    &__title {
+      text-align: center;
+      font-size: 30px;
+      color: $couleur_secondaire;
+      font-weight: bold;
+      width: 20%;
+      margin: 0 auto;
+    }
+  }
+  

@@ -1,0 +1,48 @@
+$couleur_primaire: white;
+$couleur_secondaire: #ff0042;
+
+.Home__TheCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    width: 250px;
+    height: 250px;
+    
+   
+  
+    &-title {
+      border-bottom: solid 2px $couleur_secondaire;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin: 0 auto !important;
+      align-items: center;
+      height: 50px;
+      width: 100%;
+      margin: 10px;
+      text-overflow: ellipsis;
+  
+  
+      & h3 {
+        color: $couleur_primaire;
+        font-size: 20px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+    &-image {
+      height: 200px;
+      width: 100%;
+      transition: all 0.2s ease-in-out;
+      
+    }
+  }
+  .HiddenScale {
+    height: 200px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+  
+  }
+  

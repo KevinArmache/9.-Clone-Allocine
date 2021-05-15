@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
-import Pagination from "../Components/Pagination.jsx";
-import Card from "../Components/Card.jsx";
-import "../Styles/Sass/style.scss";
+import Pagination from "../Pagination/Pagination.jsx";
+import Card from "../Card/Card.jsx";
+import "../Category/Category.scss";
 function Category() {
-  // CATEGORY
-
   const [Category, setCategory] = useState([]);
   useEffect(function () {
     fetch(
@@ -60,8 +58,8 @@ function Category() {
         <p className="Category__title">{GetName}</p>
         <div className="Category__Results">
           {Discovery.map(function (element, id) {
-            console.log(id)
-            return <Card data={element} id={id}/>;
+            console.log(id);
+            return <Card data={element} id={id} />;
           })}
         </div>
         <div>

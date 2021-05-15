@@ -1,0 +1,55 @@
+$couleur_primaire: white;
+$couleur_secondaire: #ff0042;
+
+.modal-body {
+    overflow-y: scroll;
+  }
+  .modal-header {
+    border-bottom: solid 2px $couleur_secondaire !important;
+  }
+  .ButtonInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    background-color: #15181d;
+    margin: 0 auto;
+    border: none;
+  }
+  .ColorBtnSynopsis:hover {
+    color: $couleur_secondaire;
+  }
+  
+  .CustomModel {
+    background-color: #15181d;
+  }
+  
+  .WidthModel {
+    height: 600px;
+  }
+  
+  .ImageModel {
+    width: 100%;
+  }
+  .modal-footer {
+    border: none;
+  }
+  .modal-title {
+    color: $couleur_secondaire;
+  }
+  .BtnColorModal {
+    background-color: $couleur_secondaire;
+    &:hover {
+      background-color: $couleur_secondaire;
+    }
+  }
+  .Number_of_views {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+  }
+  .modal-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  

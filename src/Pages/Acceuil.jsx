@@ -1,38 +1,37 @@
 import "../Styles/Sass/style.scss";
-import Carousel from "../Components/Carousel.jsx";
-import Card from "../Components/Card.jsx";
-import Footer from "../Components/Footer";
+import Carousel from "../Components/Carousel/Carousel.jsx";
+import Card from "../Components/Card/Card.jsx";
+import Footer from "../Components/Footer/Footer";
 
 function Acceuil({ popular, data, upcoming }) {
   return (
     <>
-      <div className="MyHome">
-        <h1 id="OnTheTop__Card__Title">
-          <strong>ON THE TOP</strong>
-        </h1>
-        <Carousel data={data} />
-        <h2 className="Films__title">
-          <strong>POPULAR</strong>
-        </h2>
+      <h1 className="OnTheTop__Card__Title">
+        <strong>ON THE TOP</strong>
+      </h1>
+      <Carousel data={data} />
+      <h2 className="PopularMovies">
+        <strong>POPULAR</strong>
+      </h2>
 
-        <div className="Home_Card_TheCards">
-          {popular.map(function (element, index) {
-            return <Card data={element} id={index} />;
-          })}
-        </div>
-
-        {/* Nouveautes */}
-
-        <h2 className="Films__title">
-          <strong>NEWS</strong>
-        </h2>
-
-        <div className="Home_Card_TheCards">
-          {upcoming.map(function (element, index) {
-            return <Card data={element} idNews={index} />;
-          })}
-        </div>
+      <div className="Home__TheCards">
+        {popular.map(function (element, index) {
+          return <Card data={element} id={index} />;
+        })}
       </div>
+
+      {/* Nouveautes */}
+
+      <h2 className="UpcomingMovies">
+        <strong>NEWS</strong>
+      </h2>
+
+      <div className="Home__TheCards">
+        {upcoming.map(function (element, index) {
+          return <Card data={element} id={index} />;
+        })}
+      </div>
+
       <Footer />
     </>
   );

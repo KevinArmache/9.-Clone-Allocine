@@ -1,22 +1,23 @@
-import Modal from "./Modal.jsx"
+import "../Card/Card.scss"
+import Modal from "../Modal/Modal.jsx"
 
-function Card ({data, id, idNews}) {
+function Card ({data, id}) {
     return(
         <>
-         <div key={data.id} className="Home_Card_TheCard">
+         <div key={data.id} className="Home__TheCard">
          <div className="HiddenScale">
                 <img
-                  className={`Home_Card_TheCard__image ScaleImage-${id} ScaleImage2-${idNews}`}
+                  className={`Home__TheCard-image ScaleImage-${id}`}
                   src={
                     "https://image.tmdb.org/t/p/original/" + data.backdrop_path
                   }
                   alt="..."
                 />
         </div>
-              <div className="Home_Card_TheCard__title">
+              <div className="Home__TheCard-title">
                 <h3><nobr>{data.title}</nobr></h3>
               </div>
-              <Modal id={id} data={data} idNews={idNews} />
+              <Modal id={id} data={data}/>
             </div>
         </>
     )

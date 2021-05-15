@@ -1,0 +1,32 @@
+$couleur_primaire: white;
+$couleur_secondaire: #ff0042;
+
+
+.carouselExampleCaptions {
+    width: 100%;
+  }
+.ImageCarousel {
+    height: 450px;
+}
+.FirstSlideCarousel {
+    width: 100%;
+    height: 450px;
+}
+.carousel-indicators button {
+    background-color: $couleur_secondaire !important;
+}
+.carousel-control-prev-icon::after {
+    color: $couleur_secondaire !important;
+}
+.carousel-control-next-icon::after {
+    color: $couleur_secondaire !important;
+}
+.Title_Carousel {
+    border: solid 2px $couleur_secondaire;
+    width: 50%;
+    margin: 0 auto;
+    background-color: $couleur_secondaire;
+}
+.CarouselFirstSlide {
+    color: $couleur_secondaire;
+}

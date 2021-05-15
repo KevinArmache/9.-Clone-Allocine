@@ -1,0 +1,62 @@
+$couleur_primaire: white;
+$couleur_secondaire: #ff0042;
+
+
+.Menu {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 3px solid $couleur_secondaire;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .Menu__title {
+    width: 30%;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    & a {
+      color: $couleur_primaire;
+      text-decoration: none;
+      font-weight: bold;
+      border-bottom: transparent solid 2px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 500 !important;
+  
+      &:hover {
+        border-bottom: solid 2px $couleur_secondaire;
+      }
+    }
+  }
+  
+  .Menu__Logo {
+    font-family: AceRecords;
+    font-size: 55px;
+    color: $couleur_secondaire;
+    margin-bottom: -0.7rem !important;
+  }
+  .Menu__Search {
+    display: flex;
+  }
+  .Menu__Search input {
+    border: none;
+    border-bottom: solid 2px $couleur_secondaire;
+    outline: none;
+    font-size: 20px;
+    font-weight: Bold;
+    color: $couleur_secondaire;
+    background-color: #15181d;
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #15181d inset !important;
+    -webkit-text-fill-color: $couleur_secondaire !important;
+  }
+  .Menu__Search input:focus {
+    background-color: #15181d;
+  }
+  .Onclick {
+    cursor: pointer;
+  }
