@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
+
 import Pagination from "../Pagination/Pagination.jsx";
 import Card from "../Card/Card.jsx";
+import Loader from "../Spinner/Spinner.jsx";
 import "../Category/Category.scss";
+
 function Category() {
+  const [Spinner, setSpinner] = useState(false);
   const [Category, setCategory] = useState([]);
   useEffect(function () {
     fetch(
@@ -11,14 +15,18 @@ function Category() {
       .then((res) => res.json())
       .then(function (data) {
         setCategory(data.genres);
+       
       });
   }, []);
+
   // GetID By Genre
   const [GetName, setGetName] = useState("");
   const [GetId, setGetId] = useState("");
+
   function handleClick(id, name) {
     setGetId(id);
     setGetName(name);
+    
   }
 
   // DISCOVERY
@@ -33,10 +41,14 @@ function Category() {
         .then((res) => res.json())
         .then(function (data) {
           setDiscovery(data.results);
+        
         });
+        
     },
     [GetId]
+   
   );
+
   return (
     <>
       <div>
@@ -57,11 +69,15 @@ function Category() {
         </div>
         <p className="Category__title">{GetName}</p>
         <div className="Category__Results">
-          {Discovery.map(function (element, id) {
-            console.log(id);
-            return <Card data={element} id={id} />;
-          })}
-        </div>
+            {Discovery.map(function (element, id) {
+              console.log(id);
+              return (
+                <>
+                  <Card data={element} id={id} />
+                </>
+              );
+            })}
+          </div>
         <div>
           <Pagination />
         </div>
