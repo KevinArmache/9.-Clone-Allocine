@@ -2,7 +2,8 @@ import "./Styles/Sass/style.scss";
 import Acceuil from "./Pages/Acceuil.jsx";
 import Start from "./Pages/Start.jsx";
 import Menu from "./Components/Menu/Menu.jsx";
-import Movies from "./Pages/Movies.jsx"
+import Movies from "./Pages/Movies.jsx";
+import Series from "./Pages/Series.jsx";
 import { useState, useEffect } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 
@@ -33,7 +34,7 @@ function App() {
 
   useEffect(function () {
     fetch(
-      "https://api.themoviedb.org/3/movie/top_rated?api_key=4521ea8693f4def400a9777ba95e0bc2&language=fr-FR&page=1"
+      "https://api.themoviedb.org/3/movie/top_rated?api_key=4521ea8693f4def400a9777ba95e0bc2&language=en-US&page=1"
     )
       .then((res) => res.json())
       .then(function (data) {
@@ -49,7 +50,7 @@ function App() {
 
   useEffect(function () {
     fetch(
-      "https://api.themoviedb.org/3/movie/popular?api_key=4521ea8693f4def400a9777ba95e0bc2&language=fr-FR&page=1"
+      "https://api.themoviedb.org/3/movie/popular?api_key=4521ea8693f4def400a9777ba95e0bc2&language=en-US&page=1"
     )
       .then((res) => res.json())
       .then(function (data) {
@@ -62,7 +63,7 @@ function App() {
 
   useEffect(function () {
     fetch(
-      "https://api.themoviedb.org/3/movie/upcoming?api_key=4521ea8693f4def400a9777ba95e0bc2&language=fr-FR&page=1"
+      "https://api.themoviedb.org/3/movie/upcoming?api_key=4521ea8693f4def400a9777ba95e0bc2&language=en-US&page=1"
     )
       .then((res) => res.json())
       .then(function (data) {
@@ -70,7 +71,19 @@ function App() {
       });
   }, []);
 
+// Series 
 
+const [SeriesTV, setSeriesTV] = useState([]);
+
+useEffect(function () {
+  fetch(
+    "https://api.themoviedb.org/3/tv/popular?api_key=4521ea8693f4def400a9777ba95e0bc2&language=en-US&page=1"
+    )
+    .then((res) => res.json())
+    .then(function (data) {
+      setSeriesTV(data.results);
+    });
+}, []);
 
   return (
     <BrowserRouter>
@@ -85,6 +98,9 @@ function App() {
         <Acceuil data={TopMovies} popular={PopularMovies}  upcoming={Upcoming} />
       </Route>
       <Route Movies path="/Movies" component={Movies} />
+      <Route Series path="/Series">
+        <Series data={SeriesTV}/>
+      </Route>
     </BrowserRouter>
   );
 }

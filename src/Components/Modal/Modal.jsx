@@ -63,7 +63,7 @@ function Modal({ data, id, idNews}) {
           <div className="modal-content CustomModel WidthModel">
             <div className="modal-header ">
               <h5 className="modal-title " id="exampleModalLabel">
-                {data.title}
+                {data.title}{data.original_name}
               </h5>
               <button
                 type="button"

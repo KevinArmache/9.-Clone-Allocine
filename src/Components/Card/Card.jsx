@@ -15,7 +15,7 @@ function Card ({data, id}) {
                 />
         </div>
               <div className="Home__TheCard-title">
-                <h3><nobr>{data.title}</nobr></h3>
+                <h3><nobr>{data.title}{data.original_name}</nobr></h3>
               </div>
               <Modal id={id} data={data}/>
             </div>

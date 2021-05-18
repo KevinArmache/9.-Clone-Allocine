@@ -9,6 +9,7 @@ $couleur_secondaire: #ff0042;
     & button {
       margin: 5px;
       border: solid 2px #15181d;
+      font-size: 10px;
       &:hover {
         border: solid 2px $couleur_secondaire;
       }
